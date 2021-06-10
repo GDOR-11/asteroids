@@ -336,11 +336,11 @@
 						pincel.font = '35px arial';
 						pincel.fillText('new record!', largura_canvas / 2, altura_canvas / 2 + 37.5);
 						pincel.font = '25px arial';
-						pincel.fillText(`your record score is now ${Math.floor(pontos)}`, largura_canvas / 2, altura_canvas / 2 + 70);
+						pincel.fillText(`your record is now ${Math.floor(pontos)}`, largura_canvas / 2, altura_canvas / 2 + 70);
 					} else {
 						pincel.font = '25px arial';
 						pincel.fillText(`your score is ${Math.floor(pontos)}`, largura_canvas / 2, altura_canvas / 2 + 35);
-						pincel.fillText(`your record score is ${Math.floor(localStorage.getItem('recorde'))}`, largura_canvas / 2, altura_canvas / 2 + 70);
+						pincel.fillText(`your record is ${Math.floor(localStorage.getItem('recorde'))}`, largura_canvas / 2, altura_canvas / 2 + 70);
 					}
 					pincel.drawImage(imagem, largura_canvas / 2 - 50, altura_canvas / 2 + 105, 100, 100);
 				} else {
