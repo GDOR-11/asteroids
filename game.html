@@ -205,6 +205,9 @@
 				}
 				pontos = 0;
 			}
+			function mod(x, y) { // mod(-5, 10) = 5     (-5) % 10 = -5
+				return x - y * Math.floor(x / y);
+			}
 			if(localStorage.getItem('recorde') == null) {
 				localStorage.setItem('recorde', 0);
 			}
