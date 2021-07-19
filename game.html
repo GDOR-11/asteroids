@@ -40,18 +40,7 @@
 				}
 				atualizar() {
 					var pos = this.corpo.m_body.m_xf.position;
-					while(pos.x < -this.r) {
-						this.corpo.m_body.SetPosition(new b2Vec2(pos.x + largura + 2 * this.r, pos.y));
-					}
-					while(pos.x > largura + this.r) {
-						this.corpo.m_body.SetPosition(new b2Vec2(pos.x - largura - 2 * this.r, pos.y));
-					}
-					while(pos.y < -this.r) {
-						this.corpo.m_body.SetPosition(new b2Vec2(pos.x, pos.y + altura + 2 * this.r));
-					}
-					while(pos.y > altura + this.r) {
-						this.corpo.m_body.SetPosition(new b2Vec2(pos.x, pos.y - altura - 2 * this.r));
-					}
+					this.corpo.m_body.SetPosition(new b2Vec2(mod(pos.x + this.r, largura + this.r * 2) - this.r, mod(pos.y + this.r, altura + this.r * 2) - this.r));
 					this.x = pos.x;
 					this.y = pos.y;
 					this.a = this.corpo.m_body.m_sweep.a;
